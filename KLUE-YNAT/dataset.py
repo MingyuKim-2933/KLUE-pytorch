@@ -12,7 +12,7 @@ class Dataset(Dataset):
         return len(self.x)
 
     def __getitem__(self, idx):
-        x = torch.IntTensor(self.x[idx])
-        y = torch.LongTensor(self.y)[idx]
+        x = torch.LongTensor(self.x[idx])
+        y = torch.LongTensor(self.y[idx])
 
         return x, y
